@@ -2,7 +2,7 @@
 
 A curated collection of SQL queries and scripts for the **Epiroc Surface Manager Database**, designed to save time and effort by providing ready-to-use database connections and pre-constructed SQL queries for common mining operations analysis.
 
-<img width="678" height="683" alt="image" src="https://github.com/user-attachments/assets/1bf1c2bd-c1f8-4a33-9b43-c196a82fa8e5" />
+<img width="339" height="342" alt="image" src="https://github.com/user-attachments/assets/1bf1c2bd-c1f8-4a33-9b43-c196a82fa8e5" />
 
 ## About
 
@@ -86,6 +86,25 @@ Surface Manager databases sometimes contain erroneous 1984-01-01 timestamps. Que
 WHEN dh.StartHoleTime = CONVERT(DATETIME, '1984-01-01 00:00:00.000') 
 THEN 'Invalid_1984_Date'
 ```
+
+## Links to File Specifications
+[EPIROC File Format - Part 1](https://buymeacoffee.com/brentbuffham/epiroc-surface-manager-file-format-specification)
+
+[EPIROC File Format - Part 2](https://buymeacoffee.com/brentbuffham/iredes)
+
+## Standards Reference
+
+File specifications are based on the IREDES (International Rock Excavation Data Exchange Standard) maintained by the IREDES Initiative. 
+The official XML schema (DrillRig.xsd) defines the DRPPlan format used for drill plan exchange.
+
+### Schema Version: V 1.3
+
+**Namespace:** [http://www.iredes.org/xml/DrillRig](http://www.iredes.org/xml/DrillRig)
+
+**IR Namespace:** [http://www.iredes.org/xml](http://www.iredes.org/xml)
+
+**Official Documentation:** [iredes.org/irdocs](iredes.org/irdocs)
+
 
 ## Contributing
 
