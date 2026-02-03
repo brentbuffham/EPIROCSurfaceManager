@@ -1,5 +1,6 @@
 -- SINGLE HOLE MWD - All Samples
--- Check raw sample spacing for this hole
+-- Check raw sample spacing for this hole in the MWD records
+-- useful for seeing if data on any particular hole is bad.
 SELECT 
     HoleId,
     Depth,
