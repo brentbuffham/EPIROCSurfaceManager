@@ -1,6 +1,6 @@
 -- MSSQL for the Drilling Quality
 -- Date: 20-8-2025
--- Author: Brent Buffham - brent.buffham@actiondb.com.au
+-- Author: Brent Buffham - [USERNAME]@[COMPANYNAME]
 -- Description: Blast hole actual drill locations and pen rates SurfaceManager
 -- Shows all planned holes with NULL drilling data when undrilled, duplicates when drilled multiple times
 
@@ -261,12 +261,12 @@ FROM SurfaceManager.dbo.PlannedHole ph
     LEFT JOIN SurfaceManager.dbo.Rig r ON dh.RigSerialNumber = r.SerialNumber
 
 WHERE 
-    d.Name LIKE '1290-1833%' --or d.Name LIKE '1240-1774%' or d.Name LIKE '1240-1783%' or d.Name LIKE '1240-1710%'
+    d.Name LIKE 'DRILLPATTERN%' --or d.Name LIKE 'DRILLPATTERN%' or d.Name LIKE 'DRILLPATTERN%' or d.Name LIKE 'DRILLPATTERN%'
     --additional filters if needed
     -- AND (dh.Status IN (2, 6) OR dh.Status IS NULL) -- Include successful, redrilled, and undrilled holes
     -- AND (dh.EndHoleTime > '2025-10-18') --OR dh.StartHoleTime IS NULL) -- Recent or undrilled holes
 	 --AND (CAST(dh.HoleName AS INT) BETWEEN 99 AND 150) -- Filter holes between 0 and 51
-	 --AND r.Name LIKE 'DR0036'
+	 --AND r.Name LIKE 'RIGNAME'
 
 ORDER BY
     d.Name DESC, 

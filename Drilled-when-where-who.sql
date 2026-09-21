@@ -35,5 +35,5 @@ SELECT
 FROM [SurfaceManager].[dbo].[DrilledHole] dh
 LEFT JOIN [SurfaceManager].[dbo].[DrillPlan] dp ON dh.DrillPlanId = dp.Id 
 LEFT JOIN [SurfaceManager].[dbo].[Rig] rg ON dh.RigSerialNumber = rg.SerialNumber
-WHERE dp.[Name] LIKE '1200%'
+WHERE dp.[Name] LIKE 'DRILLPATTERN%'
 ORDER BY rg.[Name], dh.OperatorName, StartHoleTime DESC

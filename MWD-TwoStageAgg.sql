@@ -96,7 +96,7 @@ WITH RawMWD AS (
       AND dh.RigSerialNumber = mwdh.RigSerialNumber
       AND CONVERT(VARCHAR(19), mwdh.StartLogTime, 120) = CONVERT(VARCHAR(19), dh.StartHoleTime, 120)
   -- BLAST NAME FILTER - ADJUST AS NEEDED
-  WHERE dp.[Name] LIKE '1160-3231%'-- OR dp.[NAME] LIKE '1220-1712' 
+  WHERE dp.[Name] LIKE 'DRILLPATTERN%'-- OR dp.[NAME] LIKE 'DRILLPATTERN' 
 ),
 
 -- =============================================================================

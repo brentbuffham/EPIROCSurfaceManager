@@ -56,7 +56,7 @@ All queries include considerations for:
 1. Clone this repository or download individual SQL files
 2. Open the SQL script in your SQL client
 3. Modify the filter parameters in the WHERE clauses:
-   - **Drill Pattern names** (e.g., `WHERE d.Name LIKE '1200%'`)
+   - **Drill Pattern names** (e.g., `WHERE d.Name LIKE 'DRILLPATTERN%'`)
    - **Date ranges** (e.g., `@StartDate` and `@EndDate` parameters)
    - **Hole IDs, Rig names, or other identifiers** as needed
 4. Execute the query against your Surface Manager database
@@ -65,7 +65,7 @@ All queries include considerations for:
 ### Example Modification
 ```sql
 -- Original filter in DrillingQuality.sql
-WHERE d.Name LIKE 'DP11-134-333%'
+WHERE d.Name LIKE 'DRILLPATTERN%'
 
 -- Change to your drill pattern:
 WHERE d.Name LIKE 'YourPattern%'
